@@ -1,0 +1,32 @@
+# SubZero ❄️
+> **Freeze your unwanted assets.**
+
+![Hackathon](https://img.shields.io/badge/Hackathon-Project-orange) ![Status](https://img.shields.io/badge/Status-Prototype-green) ![Python](https://img.shields.io/badge/Python-3.9+-blue)
+
+## 📖 About
+**SubZero** is an AI-powered financial utility designed to stop "subscription leakage." It solves the problem of forgotten free trials and recurring "zombie" charges that drain personal finances.
+
+By analyzing transaction data (via SMS alerts or bank statement PDFs) using OCR and pattern recognition, SubZero identifies recurring payment intervals, flags unused subscriptions, and provides a direct path to cancellation.
+
+## 🚀 Key Features
+* **Zombie Detection:** automatically flags payments occurring at specific intervals (e.g., every 30 days) that haven't been opened or used.
+* **OCR Parsing:** Uses Tesseract/Google Vision to read non-digital bank statements (PDFs/Images).
+* **Financial Health Score:** specific score based on your ratio of essential vs. non-essential recurring payments.
+* **One-Click Cancel:** (Planned) Direct links to the specific "unsubscribe" pages of major services.
+
+## 🛠️ Tech Stack
+* **Backend:** Python (Flask/FastAPI)
+* **Data Processing:** Pandas, NumPy
+* **OCR/AI:** Tesseract OCR (or EasyOCR)
+* **Frontend:** React (or Streamlit for rapid prototyping)
+
+## 📂 Repository Structure
+```bash
+SubZero/
+├── data/                   # Sample bank statements for testing
+├── src/
+│   ├── parser.py           # Core logic to parsing SMS/PDF
+│   ├── detector.py         # Algorithm to find recurring patterns
+│   └── app.py              # Main application entry point
+├── requirements.txt        # Dependencies
+└── README.md
